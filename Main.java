@@ -1,32 +1,26 @@
-import java.util.ArrayList;
+package pkgclass.main;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-
-    public static void addNumbers(List<? super Number> numbers) {
-
-        numbers.add(6);
-
-        numbers.add(24.5);
-
-        numbers.add(40);
-
-        System.out.println("Numbers:");
-
-        for (Object n : numbers) {
-
-            System.out.println(n);
-
-        }
-
-    }
-
     public static void main(String[] args) {
-
+        // 1. تجربة LowerBoundDemo
         List<Number> list = new ArrayList<>();
- addNumbers(list);
+         lowerbound.addNumbers(list);
 
+        System.out.println("-------------------");
+
+        // 2. تجربة NumberDemo
+        List<Double> doubleList = new ArrayList<>();
+        doubleList.add(5.5);
+        doubleList.add(10.2);
+       numberdemo.printNumbers(doubleList);
+
+        System.out.println("-------------------");
+
+        // 3. تجربة Printer (Generic Class)
+         printer<String> stringPrinter = new  printer<>("Hello Java Generics!");
+        stringPrinter. printer();
     }
-
 }
